@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC43F3E820BE0EAB00691918 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC43F3E720BE0EAB00691918 /* AppDelegate.swift */; };
+		EC43F3EA20BE0EAB00691918 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC43F3E920BE0EAB00691918 /* ViewController.swift */; };
+		EC43F3ED20BE0EAB00691918 /* azPodcasts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC43F3EB20BE0EAB00691918 /* azPodcasts.xcdatamodeld */; };
+		EC43F3EF20BE0EAB00691918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC43F3EE20BE0EAB00691918 /* Assets.xcassets */; };
+		EC43F3F220BE0EAB00691918 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC43F3F020BE0EAB00691918 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EC43F3E420BE0EAA00691918 /* azPodcasts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = azPodcasts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC43F3E720BE0EAB00691918 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC43F3E920BE0EAB00691918 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC43F3EC20BE0EAB00691918 /* azPodcasts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = azPodcasts.xcdatamodel; sourceTree = "<group>"; };
+		EC43F3EE20BE0EAB00691918 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC43F3F120BE0EAB00691918 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC43F3F320BE0EAB00691918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC43F3F420BE0EAC00691918 /* azPodcasts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = azPodcasts.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC43F3E120BE0EAA00691918 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC43F3DB20BE0EAA00691918 = {
+			isa = PBXGroup;
+			children = (
+				EC43F3E620BE0EAB00691918 /* azPodcasts */,
+				EC43F3E520BE0EAA00691918 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC43F3E520BE0EAA00691918 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC43F3E420BE0EAA00691918 /* azPodcasts.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC43F3E620BE0EAB00691918 /* azPodcasts */ = {
+			isa = PBXGroup;
+			children = (
+				EC43F3E720BE0EAB00691918 /* AppDelegate.swift */,
+				EC43F3E920BE0EAB00691918 /* ViewController.swift */,
+				EC43F3EE20BE0EAB00691918 /* Assets.xcassets */,
+				EC43F3F020BE0EAB00691918 /* Main.storyboard */,
+				EC43F3F320BE0EAB00691918 /* Info.plist */,
+				EC43F3F420BE0EAC00691918 /* azPodcasts.entitlements */,
+				EC43F3EB20BE0EAB00691918 /* azPodcasts.xcdatamodeld */,
+			);
+			path = azPodcasts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC43F3E320BE0EAA00691918 /* azPodcasts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC43F3F720BE0EAC00691918 /* Build configuration list for PBXNativeTarget "azPodcasts" */;
+			buildPhases = (
+				EC43F3E020BE0EAA00691918 /* Sources */,
+				EC43F3E120BE0EAA00691918 /* Frameworks */,
+				EC43F3E220BE0EAA00691918 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = azPodcasts;
+			productName = azPodcasts;
+			productReference = EC43F3E420BE0EAA00691918 /* azPodcasts.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC43F3DC20BE0EAA00691918 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Alex Azarov";
+				TargetAttributes = {
+					EC43F3E320BE0EAA00691918 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = EC43F3DF20BE0EAA00691918 /* Build configuration list for PBXProject "azPodcasts" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC43F3DB20BE0EAA00691918;
+			productRefGroup = EC43F3E520BE0EAA00691918 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC43F3E320BE0EAA00691918 /* azPodcasts */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC43F3E220BE0EAA00691918 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC43F3EF20BE0EAB00691918 /* Assets.xcassets in Resources */,
+				EC43F3F220BE0EAB00691918 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC43F3E020BE0EAA00691918 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC43F3EA20BE0EAB00691918 /* ViewController.swift in Sources */,
+				EC43F3E820BE0EAB00691918 /* AppDelegate.swift in Sources */,
+				EC43F3ED20BE0EAB00691918 /* azPodcasts.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EC43F3F020BE0EAB00691918 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC43F3F120BE0EAB00691918 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC43F3F520BE0EAC00691918 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC43F3F620BE0EAC00691918 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		EC43F3F820BE0EAC00691918 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = azPodcasts/azPodcasts.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = CLALR9F4Q5;
+				INFOPLIST_FILE = azPodcasts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.azPodcasts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		EC43F3F920BE0EAC00691918 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = azPodcasts/azPodcasts.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = CLALR9F4Q5;
+				INFOPLIST_FILE = azPodcasts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.azPodcasts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC43F3DF20BE0EAA00691918 /* Build configuration list for PBXProject "azPodcasts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC43F3F520BE0EAC00691918 /* Debug */,
+				EC43F3F620BE0EAC00691918 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC43F3F720BE0EAC00691918 /* Build configuration list for PBXNativeTarget "azPodcasts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC43F3F820BE0EAC00691918 /* Debug */,
+				EC43F3F920BE0EAC00691918 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EC43F3EB20BE0EAB00691918 /* azPodcasts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EC43F3EC20BE0EAB00691918 /* azPodcasts.xcdatamodel */,
+			);
+			currentVersion = EC43F3EC20BE0EAB00691918 /* azPodcasts.xcdatamodel */;
+			path = azPodcasts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EC43F3DC20BE0EAA00691918 /* Project object */;
+}
