@@ -7,22 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B1128C843F2EC8252A67BF4 /* Pods_azPodcasts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC4A93D39A8C049FA728CFC /* Pods_azPodcasts.framework */; };
 		EC43F3E820BE0EAB00691918 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC43F3E720BE0EAB00691918 /* AppDelegate.swift */; };
-		EC43F3EA20BE0EAB00691918 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC43F3E920BE0EAB00691918 /* ViewController.swift */; };
 		EC43F3ED20BE0EAB00691918 /* azPodcasts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC43F3EB20BE0EAB00691918 /* azPodcasts.xcdatamodeld */; };
 		EC43F3EF20BE0EAB00691918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC43F3EE20BE0EAB00691918 /* Assets.xcassets */; };
 		EC43F3F220BE0EAB00691918 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC43F3F020BE0EAB00691918 /* Main.storyboard */; };
+		EC43F3FB20BE126300691918 /* PodcastsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC43F3FA20BE126300691918 /* PodcastsVC.swift */; };
+		EC43F3FD20BE174800691918 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC43F3FC20BE174800691918 /* Parser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B3179CE8F04742F5AF10958 /* Pods-azPodcasts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-azPodcasts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-azPodcasts/Pods-azPodcasts.debug.xcconfig"; sourceTree = "<group>"; };
+		D545762F55173CB7DA598ED8 /* Pods-azPodcasts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-azPodcasts.release.xcconfig"; path = "Pods/Target Support Files/Pods-azPodcasts/Pods-azPodcasts.release.xcconfig"; sourceTree = "<group>"; };
+		DDC4A93D39A8C049FA728CFC /* Pods_azPodcasts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_azPodcasts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC43F3E420BE0EAA00691918 /* azPodcasts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = azPodcasts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC43F3E720BE0EAB00691918 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC43F3E920BE0EAB00691918 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC43F3EC20BE0EAB00691918 /* azPodcasts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = azPodcasts.xcdatamodel; sourceTree = "<group>"; };
 		EC43F3EE20BE0EAB00691918 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC43F3F120BE0EAB00691918 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC43F3F320BE0EAB00691918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC43F3F420BE0EAC00691918 /* azPodcasts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = azPodcasts.entitlements; sourceTree = "<group>"; };
+		EC43F3FA20BE126300691918 /* PodcastsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsVC.swift; sourceTree = "<group>"; };
+		EC43F3FC20BE174800691918 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,17 +36,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B1128C843F2EC8252A67BF4 /* Pods_azPodcasts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		600A40F1F1D6A66540B89771 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDC4A93D39A8C049FA728CFC /* Pods_azPodcasts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5595A8D2F909948126BE034 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B3179CE8F04742F5AF10958 /* Pods-azPodcasts.debug.xcconfig */,
+				D545762F55173CB7DA598ED8 /* Pods-azPodcasts.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EC43F3DB20BE0EAA00691918 = {
 			isa = PBXGroup;
 			children = (
 				EC43F3E620BE0EAB00691918 /* azPodcasts */,
 				EC43F3E520BE0EAA00691918 /* Products */,
+				A5595A8D2F909948126BE034 /* Pods */,
+				600A40F1F1D6A66540B89771 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +82,13 @@
 			isa = PBXGroup;
 			children = (
 				EC43F3E720BE0EAB00691918 /* AppDelegate.swift */,
-				EC43F3E920BE0EAB00691918 /* ViewController.swift */,
+				EC43F3FA20BE126300691918 /* PodcastsVC.swift */,
 				EC43F3EE20BE0EAB00691918 /* Assets.xcassets */,
 				EC43F3F020BE0EAB00691918 /* Main.storyboard */,
 				EC43F3F320BE0EAB00691918 /* Info.plist */,
 				EC43F3F420BE0EAC00691918 /* azPodcasts.entitlements */,
 				EC43F3EB20BE0EAB00691918 /* azPodcasts.xcdatamodeld */,
+				EC43F3FC20BE174800691918 /* Parser.swift */,
 			);
 			path = azPodcasts;
 			sourceTree = "<group>";
@@ -73,9 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC43F3F720BE0EAC00691918 /* Build configuration list for PBXNativeTarget "azPodcasts" */;
 			buildPhases = (
+				81C757718DA86D831C66748A /* [CP] Check Pods Manifest.lock */,
 				EC43F3E020BE0EAA00691918 /* Sources */,
 				EC43F3E120BE0EAA00691918 /* Frameworks */,
 				EC43F3E220BE0EAA00691918 /* Resources */,
+				218F2467E733D286B4BB9868 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -98,6 +127,11 @@
 				TargetAttributes = {
 					EC43F3E320BE0EAA00691918 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -131,12 +165,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		218F2467E733D286B4BB9868 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-azPodcasts/Pods-azPodcasts-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-azPodcasts/Pods-azPodcasts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81C757718DA86D831C66748A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-azPodcasts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EC43F3E020BE0EAA00691918 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC43F3EA20BE0EAB00691918 /* ViewController.swift in Sources */,
+				EC43F3FD20BE174800691918 /* Parser.swift in Sources */,
+				EC43F3FB20BE126300691918 /* PodcastsVC.swift in Sources */,
 				EC43F3E820BE0EAB00691918 /* AppDelegate.swift in Sources */,
 				EC43F3ED20BE0EAB00691918 /* azPodcasts.xcdatamodeld in Sources */,
 			);
@@ -271,6 +345,7 @@
 		};
 		EC43F3F820BE0EAC00691918 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B3179CE8F04742F5AF10958 /* Pods-azPodcasts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = azPodcasts/azPodcasts.entitlements;
@@ -278,10 +353,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CLALR9F4Q5;
 				INFOPLIST_FILE = azPodcasts/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.azPodcasts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -290,6 +362,7 @@
 		};
 		EC43F3F920BE0EAC00691918 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D545762F55173CB7DA598ED8 /* Pods-azPodcasts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = azPodcasts/azPodcasts.entitlements;
@@ -297,10 +370,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CLALR9F4Q5;
 				INFOPLIST_FILE = azPodcasts/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.azPodcasts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
