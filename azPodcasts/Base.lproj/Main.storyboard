@@ -761,17 +761,17 @@
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdi-Aa-QOz">
                                 <rect key="frame" x="0.0" y="58" width="228" height="310"/>
                                 <clipView key="contentView" id="Zur-Ef-hB5">
-                                    <rect key="frame" x="1" y="23" width="226" height="286"/>
+                                    <rect key="frame" x="1" y="0.0" width="226" height="309"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Mfe-T7-wAE" viewBased="YES" id="yjo-Fj-X1i">
-                                            <rect key="frame" x="0.0" y="0.0" width="228" height="286"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="226" height="286"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn identifier="" width="225" minWidth="40" maxWidth="1000" id="vag-bm-shd">
+                                                <tableColumn identifier="" width="223" minWidth="40" maxWidth="1000" id="vag-bm-shd">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Podcasts">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -784,12 +784,12 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="TTQ-Q0-2Rc">
-                                                            <rect key="frame" x="1" y="1" width="225" height="17"/>
+                                                        <tableCellView identifier="podcastCell" id="TTQ-Q0-2Rc">
+                                                            <rect key="frame" x="1" y="1" width="223" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WDz-j5-u2a">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="225" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="223" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="v9g-VX-bkp">
                                                                         <font key="font" metaFont="system"/>
@@ -805,10 +805,14 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="Xzh-Iq-EXb" id="paH-5W-Czm"/>
+                                                <outlet property="delegate" destination="Xzh-Iq-EXb" id="3FP-C8-zZT"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="5Ha-Is-UTw">
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="5Ha-Is-UTw">
                                     <rect key="frame" x="1" y="293" width="226" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -817,7 +821,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="Mfe-T7-wAE">
-                                    <rect key="frame" x="0.0" y="0.0" width="228" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="226" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
@@ -837,6 +841,7 @@
                     </view>
                     <connections>
                         <outlet property="podcastURLTextField" destination="8JQ-yO-AIb" id="fK2-Ms-pMv"/>
+                        <outlet property="tableView" destination="yjo-Fj-X1i" id="yyU-lo-aoo"/>
                     </connections>
                 </viewController>
                 <customObject id="hbU-dM-aik" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

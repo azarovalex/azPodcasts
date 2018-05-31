@@ -83,12 +83,12 @@
 			children = (
 				EC43F3E720BE0EAB00691918 /* AppDelegate.swift */,
 				EC43F3FA20BE126300691918 /* PodcastsVC.swift */,
+				EC43F3FC20BE174800691918 /* Parser.swift */,
 				EC43F3EE20BE0EAB00691918 /* Assets.xcassets */,
 				EC43F3F020BE0EAB00691918 /* Main.storyboard */,
 				EC43F3F320BE0EAB00691918 /* Info.plist */,
 				EC43F3F420BE0EAC00691918 /* azPodcasts.entitlements */,
 				EC43F3EB20BE0EAB00691918 /* azPodcasts.xcdatamodeld */,
-				EC43F3FC20BE174800691918 /* Parser.swift */,
 			);
 			path = azPodcasts;
 			sourceTree = "<group>";
@@ -349,13 +349,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = azPodcasts/azPodcasts.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CLALR9F4Q5;
 				INFOPLIST_FILE = azPodcasts/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.azPodcasts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -366,13 +371,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = azPodcasts/azPodcasts.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CLALR9F4Q5;
 				INFOPLIST_FILE = azPodcasts/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.azPodcasts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

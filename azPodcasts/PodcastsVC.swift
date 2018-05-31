@@ -11,10 +11,14 @@ import Cocoa
 class PodcastsVC: NSViewController {
     
     @IBOutlet weak var podcastURLTextField: NSTextField!
+    @IBOutlet weak var tableView: NSTableView!
+    
+    var podcasts = [Podcast]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         podcastURLTextField.stringValue = "http://feeds.soundcloud.com/users/soundcloud:users:13056021/sounds.rss"
+        getPodcasts()
     }
     
     @IBAction func addPodcastClicked(_ sender: Any) {
@@ -25,11 +29,76 @@ class PodcastsVC: NSViewController {
             guard data != nil else { return }
             
             let parser = Parser()
-            parser.getPodcastMetaData(data: data!)
+            let info = parser.getPodcastMetaData(data: data!)
             
-            
+            if self.isPodcastExsists(withURL: url.absoluteString) {
+                guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else { return }
+                let managedContext = appDelegate.persistentContainer.viewContext
+                let podcast = Podcast(context: managedContext)
+                podcast.url = url.absoluteString
+                podcast.imageURL = info.imageURL
+                podcast.title = info.title
+                
+                appDelegate.saveAction(nil)
+                self.getPodcasts()
+            }
         }.resume()
         
         podcastURLTextField.stringValue = ""
+    }
+    
+    func getPodcasts() {
+        guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else { return }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest: NSFetchRequest<Podcast> = Podcast.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        do {
+            podcasts = try managedContext.fetch(fetchRequest)
+            print(podcasts)
+        } catch {
+            print(error)
+        }
+        DispatchQueue.main.async(execute: {
+            self.tableView.reloadData()
+        })
+    }
+    
+    func isPodcastExsists(withURL url: String) -> Bool {
+        guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else { return false }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest: NSFetchRequest<Podcast> = Podcast.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "url == %s", url)
+        do {
+            let matchingPodcasts = try managedContext.fetch(fetchRequest)
+            if matchingPodcasts.count >= 1 {
+                return true
+            } else {
+                return false
+            }
+        } catch {
+            print(error)
+        }
+        return false
+    }
+}
+
+
+extension PodcastsVC: NSTableViewDelegate, NSTableViewDataSource {
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return podcasts.count
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier.init("podcastCell"), owner: self) as? NSTableCellView
+        let currentPodcast = podcasts[row]
+        if currentPodcast.title != nil {
+            cell?.textField?.stringValue = currentPodcast.title!
+        } else {
+           cell?.textField?.stringValue = "Unkown Title"
+        }
+        
+        return cell
     }
 }
