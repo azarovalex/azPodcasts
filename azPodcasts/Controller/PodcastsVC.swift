@@ -14,10 +14,13 @@ class PodcastsVC: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
     
     var podcasts = [Podcast]()
+    var detailedVC: PodcastDetailedVC? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         podcastURLTextField.stringValue = "http://feeds.soundcloud.com/users/soundcloud:users:13056021/sounds.rss"
+        tableView.delegate = self
+        tableView.dataSource = self
         getPodcasts()
     }
     
@@ -31,18 +34,18 @@ class PodcastsVC: NSViewController {
             let parser = Parser()
             let info = parser.getPodcastMetaData(data: data!)
             
-            if self.isPodcastExsists(withURL: url.absoluteString) {
-                guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else { return }
-                let managedContext = appDelegate.persistentContainer.viewContext
-                let podcast = Podcast(context: managedContext)
-                podcast.url = url.absoluteString
-                podcast.imageURL = info.imageURL
-                podcast.title = info.title
-                
-                appDelegate.saveAction(nil)
-                self.getPodcasts()
-            }
-        }.resume()
+            
+            // Check if podcast already added
+            guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else { return }
+            let managedContext = appDelegate.persistentContainer.viewContext
+            let podcast = Podcast(context: managedContext)
+            podcast.url = url.absoluteString
+            podcast.imageURL = info.imageURL
+            podcast.title = info.title
+            
+            appDelegate.saveAction(nil)
+            self.getPodcasts()
+            }.resume()
         
         podcastURLTextField.stringValue = ""
     }
@@ -96,9 +99,16 @@ extension PodcastsVC: NSTableViewDelegate, NSTableViewDataSource {
         if currentPodcast.title != nil {
             cell?.textField?.stringValue = currentPodcast.title!
         } else {
-           cell?.textField?.stringValue = "Unkown Title"
+            cell?.textField?.stringValue = "Unkown Title"
         }
         
         return cell
+    }
+    
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        guard tableView.selectedRow >= 0 else { return }
+        let currentPodcast = podcasts[tableView.selectedRow]
+        detailedVC?.podcast = currentPodcast
+        detailedVC?.updateView()
     }
 }

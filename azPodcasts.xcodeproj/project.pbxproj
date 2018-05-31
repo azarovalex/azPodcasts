@@ -14,6 +14,8 @@
 		EC43F3F220BE0EAB00691918 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC43F3F020BE0EAB00691918 /* Main.storyboard */; };
 		EC43F3FB20BE126300691918 /* PodcastsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC43F3FA20BE126300691918 /* PodcastsVC.swift */; };
 		EC43F3FD20BE174800691918 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC43F3FC20BE174800691918 /* Parser.swift */; };
+		ECB15CA920C028D700FB6C32 /* PodcastDetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB15CA720C028D700FB6C32 /* PodcastDetailedVC.swift */; };
+		ECB15CAC20C02AC500FB6C32 /* SplitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB15CAB20C02AC500FB6C32 /* SplitVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		EC43F3F420BE0EAC00691918 /* azPodcasts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = azPodcasts.entitlements; sourceTree = "<group>"; };
 		EC43F3FA20BE126300691918 /* PodcastsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsVC.swift; sourceTree = "<group>"; };
 		EC43F3FC20BE174800691918 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		ECB15CA720C028D700FB6C32 /* PodcastDetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastDetailedVC.swift; sourceTree = "<group>"; };
+		ECB15CAB20C02AC500FB6C32 /* SplitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +85,9 @@
 		EC43F3E620BE0EAB00691918 /* azPodcasts */ = {
 			isa = PBXGroup;
 			children = (
+				ECB15CAE20C02B2800FB6C32 /* Model */,
+				ECB15CAD20C02B1400FB6C32 /* Controller */,
 				EC43F3E720BE0EAB00691918 /* AppDelegate.swift */,
-				EC43F3FA20BE126300691918 /* PodcastsVC.swift */,
-				EC43F3FC20BE174800691918 /* Parser.swift */,
 				EC43F3EE20BE0EAB00691918 /* Assets.xcassets */,
 				EC43F3F020BE0EAB00691918 /* Main.storyboard */,
 				EC43F3F320BE0EAB00691918 /* Info.plist */,
@@ -91,6 +95,24 @@
 				EC43F3EB20BE0EAB00691918 /* azPodcasts.xcdatamodeld */,
 			);
 			path = azPodcasts;
+			sourceTree = "<group>";
+		};
+		ECB15CAD20C02B1400FB6C32 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC43F3FA20BE126300691918 /* PodcastsVC.swift */,
+				ECB15CA720C028D700FB6C32 /* PodcastDetailedVC.swift */,
+				ECB15CAB20C02AC500FB6C32 /* SplitVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ECB15CAE20C02B2800FB6C32 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC43F3FC20BE174800691918 /* Parser.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,9 +232,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC43F3FD20BE174800691918 /* Parser.swift in Sources */,
+				ECB15CAC20C02AC500FB6C32 /* SplitVC.swift in Sources */,
 				EC43F3FB20BE126300691918 /* PodcastsVC.swift in Sources */,
 				EC43F3E820BE0EAB00691918 /* AppDelegate.swift in Sources */,
 				EC43F3ED20BE0EAB00691918 /* azPodcasts.xcdatamodeld in Sources */,
+				ECB15CA920C028D700FB6C32 /* PodcastDetailedVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
