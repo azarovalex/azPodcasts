@@ -14,8 +14,10 @@
 		EC43F3F220BE0EAB00691918 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC43F3F020BE0EAB00691918 /* Main.storyboard */; };
 		EC43F3FB20BE126300691918 /* PodcastsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC43F3FA20BE126300691918 /* PodcastsVC.swift */; };
 		EC43F3FD20BE174800691918 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC43F3FC20BE174800691918 /* Parser.swift */; };
+		ECAA0F2320C2F6090042A0C0 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAA0F2220C2F6090042A0C0 /* Episode.swift */; };
 		ECB15CA920C028D700FB6C32 /* PodcastDetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB15CA720C028D700FB6C32 /* PodcastDetailedVC.swift */; };
 		ECB15CAC20C02AC500FB6C32 /* SplitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB15CAB20C02AC500FB6C32 /* SplitVC.swift */; };
+		ECBE9DCD20C428C500DB4A00 /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBE9DCC20C428C500DB4A00 /* EpisodeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +33,10 @@
 		EC43F3F420BE0EAC00691918 /* azPodcasts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = azPodcasts.entitlements; sourceTree = "<group>"; };
 		EC43F3FA20BE126300691918 /* PodcastsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsVC.swift; sourceTree = "<group>"; };
 		EC43F3FC20BE174800691918 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		ECAA0F2220C2F6090042A0C0 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		ECB15CA720C028D700FB6C32 /* PodcastDetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastDetailedVC.swift; sourceTree = "<group>"; };
 		ECB15CAB20C02AC500FB6C32 /* SplitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitVC.swift; sourceTree = "<group>"; };
+		ECBE9DCC20C428C500DB4A00 /* EpisodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		EC43F3E620BE0EAB00691918 /* azPodcasts */ = {
 			isa = PBXGroup;
 			children = (
+				ECBE9DCB20C4289B00DB4A00 /* View */,
 				ECB15CAE20C02B2800FB6C32 /* Model */,
 				ECB15CAD20C02B1400FB6C32 /* Controller */,
 				EC43F3E720BE0EAB00691918 /* AppDelegate.swift */,
@@ -111,8 +116,18 @@
 			isa = PBXGroup;
 			children = (
 				EC43F3FC20BE174800691918 /* Parser.swift */,
+				ECAA0F2220C2F6090042A0C0 /* Episode.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ECBE9DCB20C4289B00DB4A00 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECBE9DCC20C428C500DB4A00 /* EpisodeCell.swift */,
+			);
+			name = View;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +164,7 @@
 				TargetAttributes = {
 					EC43F3E320BE0EAA00691918 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -233,8 +249,10 @@
 			files = (
 				EC43F3FD20BE174800691918 /* Parser.swift in Sources */,
 				ECB15CAC20C02AC500FB6C32 /* SplitVC.swift in Sources */,
+				ECAA0F2320C2F6090042A0C0 /* Episode.swift in Sources */,
 				EC43F3FB20BE126300691918 /* PodcastsVC.swift in Sources */,
 				EC43F3E820BE0EAB00691918 /* AppDelegate.swift in Sources */,
+				ECBE9DCD20C428C500DB4A00 /* EpisodeCell.swift in Sources */,
 				EC43F3ED20BE0EAB00691918 /* azPodcasts.xcdatamodeld in Sources */,
 				ECB15CA920C028D700FB6C32 /* PodcastDetailedVC.swift in Sources */,
 			);
@@ -372,6 +390,7 @@
 			baseConfigurationReference = 2B3179CE8F04742F5AF10958 /* Pods-azPodcasts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = azPodcasts/azPodcasts.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -385,6 +404,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.azPodcasts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -394,6 +415,7 @@
 			baseConfigurationReference = D545762F55173CB7DA598ED8 /* Pods-azPodcasts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = azPodcasts/azPodcasts.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -407,6 +429,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.azPodcasts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

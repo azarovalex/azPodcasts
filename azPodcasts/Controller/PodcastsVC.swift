@@ -18,7 +18,6 @@ class PodcastsVC: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        podcastURLTextField.stringValue = "http://feeds.soundcloud.com/users/soundcloud:users:13056021/sounds.rss"
         tableView.delegate = self
         tableView.dataSource = self
         getPodcasts()
@@ -26,16 +25,21 @@ class PodcastsVC: NSViewController {
     
     @IBAction func addPodcastClicked(_ sender: Any) {
         guard let url = URL(string: podcastURLTextField.stringValue) else { return }
+        guard isPodcastExsists(withURL: url.absoluteString) == false else {
+            showAlert(withAlertStyle: .critical, header: "Podcast aleready exists!", body: "There is already a podcast with the same url.")
+            return
+        }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard error == nil else { print(error as Any); return }
-            guard data != nil else { return }
+            guard error == nil, data != nil else { return }
             
             let parser = Parser()
             let info = parser.getPodcastMetaData(data: data!)
+            guard info.title != nil else {
+                self.showAlert(withAlertStyle: .critical, header: "Cannot open RSS file!", body: "There is an error parsing your podcast link, please, check it and try again.")
+                return
+            }
             
-            
-            // Check if podcast already added
             guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else { return }
             let managedContext = appDelegate.persistentContainer.viewContext
             let podcast = Podcast(context: managedContext)
@@ -45,7 +49,7 @@ class PodcastsVC: NSViewController {
             
             appDelegate.saveAction(nil)
             self.getPodcasts()
-            }.resume()
+        }.resume()
         
         podcastURLTextField.stringValue = ""
     }
@@ -67,12 +71,13 @@ class PodcastsVC: NSViewController {
         })
     }
     
+    
     func isPodcastExsists(withURL url: String) -> Bool {
         guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else { return false }
         let managedContext = appDelegate.persistentContainer.viewContext
         
         let fetchRequest: NSFetchRequest<Podcast> = Podcast.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "url == %s", url)
+        fetchRequest.predicate = NSPredicate(format: "url == %@", url)
         do {
             let matchingPodcasts = try managedContext.fetch(fetchRequest)
             if matchingPodcasts.count >= 1 {
@@ -84,6 +89,17 @@ class PodcastsVC: NSViewController {
             print(error)
         }
         return false
+    }
+    
+    func showAlert(withAlertStyle alertStyle: NSAlert.Style, header: String, body: String) {
+        let alert = NSAlert.init()
+        alert.alertStyle = alertStyle
+        alert.messageText = header
+        alert.informativeText = body
+        alert.addButton(withTitle: "OK")
+        DispatchQueue.main.async {
+            alert.runModal()
+        }
     }
 }
 
