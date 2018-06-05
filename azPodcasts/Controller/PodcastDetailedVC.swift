@@ -10,8 +10,8 @@ import Cocoa
 import AVKit
 
 class PodcastDetailedVC: NSViewController  {
-    @IBOutlet weak var avPlayerView: AVPlayerView!
     
+    @IBOutlet weak var avPlayerView: AVPlayerView!
     @IBOutlet weak var titleLabel: NSTextField!
     @IBOutlet weak var imageView: NSImageView!
     @IBOutlet weak var tableView: NSTableView!
@@ -44,8 +44,10 @@ class PodcastDetailedVC: NSViewController  {
             tableView.isHidden = false
             deleteButton.isHidden = false
             titleLabel.isHidden = false
+            imageView.isHidden = false
         } else {
-            tableView.accessibilityParent()
+            imageView.isHidden = true
+            tableView.isHidden = true
             deleteButton.isHidden = true
             titleLabel.isHidden = true
         }
