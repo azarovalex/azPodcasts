@@ -16,11 +16,11 @@ class SplitVC: NSSplitViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let podcastsVC = podcastsItem.viewController as? PodcastsVC,
-            let detailedVC = detailedViewItem.viewController as? PodcastDetailedVC else { return }
+        guard let podcastsVC = self.podcastsItem.viewController as? PodcastsVC,
+            let detailedVC = self.detailedViewItem.viewController as? PodcastDetailedVC else { return }
         
         podcastsVC.detailedVC = detailedVC
-        detailedVC.podcasts = podcastsVC
+        detailedVC.podcasts = podcastsVC        
     }
     
 }
